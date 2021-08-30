@@ -14,7 +14,8 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 export default function App() {
 
 	const Stack = createNativeStackNavigator();
-  return (
+  
+	return (
     
 	  <PaperProvider settings={{ icon: props => <AntDesign {...props} />, }}>
    
