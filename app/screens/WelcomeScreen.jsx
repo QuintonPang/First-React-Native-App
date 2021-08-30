@@ -5,6 +5,9 @@ import { StyleSheet, Text, View, SafeAreaView, Image, ImageBackground,
 } from 'react-native';
 
 
+//using String for margin padding height width etc causes error without being specified, unless it is percentage, viewport width and viewport height don't work either... should just use numbers for px
+
+
 const WelcomeScreen=({navigation})=>{
 
 
@@ -36,7 +39,7 @@ const WelcomeScreen=({navigation})=>{
 			alignSelf:"center",
 											                 
 
-			marginTop:"150px",                         
+			marginTop:150,                         
 											       
 		},
 
@@ -44,11 +47,13 @@ const WelcomeScreen=({navigation})=>{
 		logo:{
 				                                                                        
 
-			width:"50px",
+			width:50,
 				             
-			height:"50px",
+			height:50,
 				              
-			position:"absolute",                                       alignSelf:"center",                                        marginTop:"90px",
+			position:"absolute",
+			alignSelf:"center",   
+			marginTop:90,
 				                                                           
 
 				
@@ -96,8 +101,7 @@ const WelcomeScreen=({navigation})=>{
 		
 
 		
-		<Pressable style={styles.login}onPress={() => navigation.navigate('ViewImage', {}) } >
-
+		<Pressable style={styles.login} onPress={() =>navigation.navigate('ViewImage')}>
 			<Text>Login</Text>
 
 		</Pressable>

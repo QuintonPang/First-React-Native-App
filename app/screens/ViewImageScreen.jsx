@@ -2,6 +2,9 @@ import React from "react";
 import { View, Image, Pressable, Text } from "react-native";
 import { IconButton } from 'react-native-paper';
 
+//using String for margin padding height width etc causes error without being specified, unless
+//it is percentage, viewport width and viewport height don't work either... should just use numbers for px
+
 const ViewImageScreen=({navigation})=>{
 
 
@@ -9,17 +12,17 @@ const ViewImageScreen=({navigation})=>{
 
 		<View style={{flexDirection:"column",flex:1,backgroundColor:"#000000"}}>
 
-			<View style={{paddingTop:"30px",flex:0.25, flexDirection:"row", justifyContent:"space-between"}}>
+			<View style={{paddingTop:30 ,flex:0.25, flexDirection:"row", justifyContent:"space-between"}}>
 
 					
 
 
 			 	
 
-					<IconButton style={{height:"50px",width:"50px",backgroundColor:"#eb3449"}} icon="back"  onPress={() => navigation.navigate('Welcome', {}) } />                                                            
+					<IconButton style={{height:50, width:50,backgroundColor:"#eb3449"}} icon="back"  onPress={() => navigation.navigate('Welcome', {}) } />                                                            
 		                        
 		                                                                                   	              
-				<IconButton style={{height:"50px",width:"50px",backgroundColor:"#34ebd5"}}/>
+				<IconButton style={{height:50 ,width:50,backgroundColor:"#34ebd5"}}/>
 
 
 		
@@ -29,7 +32,7 @@ const ViewImageScreen=({navigation})=>{
 
 			<View style={{flex:3}}>
 
-				<Image style={{height:"100%",weight:"100%"}}source={require("../assets/chair.jpg")} resizeMode="contain"/>
+				<Image style={{height:"100%",width:"100%"}}source={require("../assets/chair.jpg")} resizeMode="contain"/>
 
 			</View>
 
